@@ -8,7 +8,8 @@ export function SoundController() {
 
   useEffect(() => {
     // Memanggil file dari folder public/sounds/
-    audioRef.current = new Audio('/sounds/animus-ambient.mp3');
+    const base = import.meta.env.BASE_URL || '/';
+    audioRef.current = new Audio(`${base}sounds/animus-ambient.mp3`);
     audioRef.current.loop = true;  // Mengulang audio terus menerus
     audioRef.current.volume = 0.5; // Mengatur volume (0.0 sampai 1.0)
 
