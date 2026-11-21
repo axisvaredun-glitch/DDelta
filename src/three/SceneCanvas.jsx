@@ -47,6 +47,7 @@ export function SceneCanvas({ mode = 'intro' }) {
 
   const vignetteOpacity = useTransform(smoothProgress, [REVEAL_START, 1.0], [0, 1]);
 
+
   return (
     <div className="pointer-events-none fixed inset-0 z-0">
       <Canvas
@@ -68,5 +69,6 @@ export function SceneCanvas({ mode = 'intro' }) {
         aria-hidden
       />
     </div>
+    
   );
 }
