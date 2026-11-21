@@ -6,6 +6,7 @@ export function VideoSequencePlayer({ progress, isActive }) {
   const imagesRef = useRef(new Array(988).fill(null));
   const [loadedPercent, setLoadedPercent] = useState(0);
   const TOTAL_FRAMES = 988;
+  const frameBase = `${import.meta.env.BASE_URL}models/video-sequence/mountain-flight/`;
 
   const drawFrame = useCallback((val) => {
     const canvas = canvasRef.current;
@@ -52,7 +53,7 @@ export function VideoSequencePlayer({ progress, isActive }) {
              const img = new Image();
              
              // Pastikan path ini udah sesuai sama struktur folder terakhir lu
-             img.src = `/models/video-sequence/mountain-flight/${i}.jpg`;
+             img.src = `${frameBase}${i}.jpg`;
              
              img.onload = () => {
                 imagesRef.current[i - 1] = img;
