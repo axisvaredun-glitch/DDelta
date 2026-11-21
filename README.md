@@ -19,6 +19,20 @@ npm install
 npm run dev
 ```
 
+## GitHub Pages (live)
+
+**URL:** https://axisvaredun-glitch.github.io/DDelta/
+
+Jangan deploy folder root `main` — itu file dev (`/src/main.jsx`) dan layar akan putih.
+
+1. Push ke `main` → workflow **Deploy to GitHub Pages** jalan (`npm run build` → upload `dist/`).
+2. Repo **Settings → Pages** → **Build and deployment**:
+   - **Source:** Deploy from a branch
+   - **Branch:** `gh-pages` / folder **/(root)**
+3. Tunggu ~1–2 menit, hard refresh: `Ctrl+Shift+R`.
+
+Kalau Pages masih pakai branch **`main`**, situs akan tetap putih (itu sumber kode, bukan build).
+
 ## Blender workflow
 
 1. Model + **clay** material (principled: high roughness, low metalness).
